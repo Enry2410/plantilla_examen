@@ -56,7 +56,7 @@ public class MainView extends VerticalLayout {
             deleteButton.addThemeVariants(ButtonVariant.LUMO_ERROR);
             deleteButton.addClickListener(e -> {
                 service.delete(item);
-                dataProvider.getItems().removeItem();
+                dataProvider.getItems().remove(item);
                 dataProvider.refreshAll();
             });
             return deleteButton;
